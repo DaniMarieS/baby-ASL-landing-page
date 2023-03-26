@@ -15,6 +15,11 @@
       }
       img {
         max-width: 100%;
+        transition: all 150ms ease-in-out;
+        border-radius: 20px;
+      }
+      img:hover {
+        transform: scale(1.5);
       }
       button {
         display: block;
@@ -51,8 +56,8 @@
 
       .container {
         margin: 20px auto;
-        max-width: 800px;
-        background-color: white;
+        max-width: 900px;
+        background-color: lightgray;
         padding: 30px;
         border-radius: 40px;
       }
@@ -72,6 +77,12 @@
       .learn-more {
         text-align: center;
       }
+      .grid {
+        margin: 30px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+      }
     </style>
   </head>
   <body>
@@ -79,30 +90,32 @@
     <div class="container">
       <h1>Baby Sign Language</h1>
       <h2>Empower your baby/toddler to be understood</h2>
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/558/original/Mom_dad_en.jpeg?1679765102"
-        alt="mom dad sign languag"
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/556/original/Eat_finish_en.jpeg?1679765088"
-        alt="eat finish sign language"
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/559/original/More_drink_en.jpeg?1679765120"
-        alt="more drink sign language"
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/555/original/512px-Yes_no_en.jpeg?1679765074"
-        alt="yes no sign language"
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/560/original/Play_now_en.jpeg?1679765134"
-        alt="play now sign language"
-      />
-      <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/554/original/512px-Tired_sleepy_hurt_en.jpeg?1679765063"
-        alt="tired sleepy sign language"
-      />
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/558/original/Mom_dad_en.jpeg?1679765102"
+          alt="mom dad sign languag"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/685/original/eat_finish_en.jpeg?1679846850"
+          alt="eat finish sign language"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/559/original/More_drink_en.jpeg?1679765120"
+          alt="more drink sign language"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/555/original/512px-Yes_no_en.jpeg?1679765074"
+          alt="yes no sign language"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/560/original/Play_now_en.jpeg?1679765134"
+          alt="play now sign language"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/554/original/512px-Tired_sleepy_hurt_en.jpeg?1679765063"
+          alt="tired sleepy sign language"
+        />
+      </div>
       <p>
         Baby sign language is the use of manual signing allowing infants and
         toddlers to communicate emotions, desires, and objects prior to spoken
