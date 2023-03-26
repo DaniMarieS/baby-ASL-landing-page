@@ -24,17 +24,58 @@
         border: 1px solid cornflowerblue;
         background-color: white;
         font-size: 18px;
+        transition: all 150ms ease-in-out;
       }
+      button:hover {
+        background-color: cornflowerblue;
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+        margin: 30px 0;
+      }
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      hr {
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.75),
+          rgba(0, 0, 0, 0)
+        );
+      }
+
       .container {
+        margin: 20px auto;
         max-width: 800px;
         background-color: white;
         padding: 30px;
         border-radius: 40px;
       }
+      .theme-button {
+        font-size: 11px;
+        background: black;
+        color: white;
+        padding: 8px;
+      }
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+      .wiki-link {
+        color: rgb(0, 0, 0, 0.5);
+      }
+      .learn-more {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
-    <button>Dark Mode</button>
+    <button class="theme-button">Dark Mode 🌙</button>
     <div class="container">
       <h1>Baby Sign Language</h1>
       <h2>Empower your baby/toddler to be understood</h2>
@@ -82,7 +123,17 @@
         as any spoken language, simplified signs are often used with infants in
         baby sign.
       </p>
-      <button>learn more</button>
+      <p class="learn-more">
+        <a
+          href="https://en.wikipedia.org/wiki/Baby_sign_language"
+          target="_blank"
+          class="wikipedia-link"
+        >
+          full text here
+        </a>
+      </p>
+      <hr />
+      <button>🤟 Teach me more signs</button>
     </div>
     <footer>
       Open-source code by
@@ -90,7 +141,7 @@
         href="https://github.com/DaniMarieS/baby-ASL-landing-page"
         target="_blank"
         >Dani Shotwell</a
-      >
+      ><br />
     </footer>
   </body>
 </html>
