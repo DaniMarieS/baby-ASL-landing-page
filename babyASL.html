@@ -7,20 +7,29 @@
     <title>Baby Sign Language 🤟</title>
     <style>
       body {
-        background: cornflowerblue;
+        background: url("images/973166_OGBN9E0.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
       }
       h1,
-      h2 {
+      h2,
+      h3 {
         text-align: center;
         font-family: "quicksand";
+        color: rgb(0, 0, 0, 0.8);
       }
       h1 {
         margin-top: 20px;
+        text-shadow: 3px 4px 10px rgba(1, 1, 1, 0.3);
       }
       h2 {
         line-height: 0.6;
         font-weight: 500;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 20px auto;
       }
       img {
         max-width: 100%;
@@ -35,32 +44,46 @@
       p {
         font-family: "quicksand";
         line-height: 1.8;
+        font-size: 18px;
+        color: rgb(0, 0, 0, 0.8);
       }
       button {
         display: block;
         margin: 0 auto;
+        font-weight: 600;
+        color: white;
         padding: 10px;
+        border: none;
         border-radius: 15px;
-        border: 1px solid cornflowerblue;
-        background-color: white;
-        font-size: 18px;
+        background-color: rgb(163, 198, 192);
+        box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1);
+        font-size: 20px;
         font-family: "quicksand";
         transition: all 150ms ease-in-out;
       }
       button:hover {
-        background-color: cornflowerblue;
+        background-color: rgb(184, 219, 215);
         cursor: pointer;
       }
+      button:active {
+        background-color: rgb(184, 219, 215);
+        box-shadow: 6px 6px 19px rgba(0, 0, 0, 0.3);
+        transform: translateY(2px);
+      }
       footer {
+        color: rgb(0, 0, 0, 0.5);
         text-align: center;
-        margin: 30px 0;
+        margin: 20px 0;
         font-family: "quicksand";
+        font-size: 15px;
       }
       a {
         text-decoration: none;
+        color: rgb(68, 100, 100);
         cursor: pointer;
       }
       hr {
+        margin-top: 50px;
         border: 0;
         height: 1px;
         background-image: linear-gradient(
@@ -70,30 +93,62 @@
           rgba(0, 0, 0, 0)
         );
       }
+      .gallery {
+        margin-top: 15px;
+      }
+      .gallery.bottom {
+        margin-bottom: 20px;
+      }
 
       .container {
         margin: 20px auto;
         max-width: 900px;
-        background-color: lightgray;
+        background: white;
         padding: 30px;
         border-radius: 40px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
       }
       .theme-button {
         font-size: 11px;
-        background: black;
+        background: gray;
         color: white;
         padding: 8px;
       }
       .theme-button:hover {
-        color: black;
+        color: rgb(0, 0, 0, 0.8);
         background: white;
       }
+      .dark {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(69, 86, 102) 0%,
+          rgb(34, 34, 34) 90%
+        );
+      }
+      .dark .container {
+        background: rgb(255, 255, 255, 0.2);
+      }
+      .dark h1,
+      .dark h2,
+      .dark h3,
+      .dark p {
+        color: whitesmoke;
+      }
+      .dark button {
+        background: white;
+        color: rgb(0, 0, 0, 0.8);
+      }
+      .dark footer {
+        color: darkgray;
+      }
+      .dark a {
+        color: rgb(163, 198, 192);
+      }
+
       .wiki-link {
         color: rgb(0, 0, 0, 0.5);
       }
-      .learn-more {
-        text-align: center;
-      }
+
       .grid {
         margin: 30px 0;
         display: grid;
@@ -107,6 +162,8 @@
     <div class="container">
       <h1>Baby Sign Language</h1>
       <h2>Empower your baby/toddler to be understood</h2>
+      <h3>Common Signs</h3>
+      <hr class="gallery" />
       <div class="grid">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/558/original/Mom_dad_en.jpeg?1679765102"
@@ -133,6 +190,7 @@
           alt="tired sleepy sign language"
         />
       </div>
+      <hr class="gallery" />
       <p>
         Baby sign language is the use of manual signing allowing infants and
         toddlers to communicate emotions, desires, and objects prior to spoken
@@ -144,34 +202,46 @@
         parent-child bond and communication, decreased frustration, and improved
         self-esteem for both the parent and child.
       </p>
-      <p>
-        Baby sign is distinct from sign language. Baby sign is used by hearing
-        parents with hearing children to improve communication. Sign languages,
-        including ASL, BSL, ISL and others, are natural languages, typically
-        used in the Deaf community. Sign languages maintain their own grammar,
-        and sentence structure. Because sign languages are as complex to learn
-        as any spoken language, simplified signs are often used with infants in
-        baby sign.
-      </p>
-      <p class="learn-more">
-        <a
-          href="https://en.wikipedia.org/wiki/Baby_sign_language"
-          target="_blank"
-          class="wikipedia-link"
-        >
-          full text here
-        </a>
-      </p>
-      <hr />
-      <button>🤟 Teach me more signs</button>
+
+      <button onclick="signDictionary()">Learn more signs</button>
     </div>
+    <hr />
     <footer>
       Open-source code by
       <a
         href="https://github.com/DaniMarieS/baby-ASL-landing-page"
         target="_blank"
-        >Dani Shotwell</a
+        >Dani Shotwell 👩🏽‍💻</a
       ><br />
+      Text sourced from
+      <a
+        href="https://en.wikipedia.org/wiki/Baby_sign_language"
+        target="_blank"
+        class="wikipedia-link"
+      >
+        Wikipedia 📖 </a
+      ><br />
+      <a href="https://commons.wikimedia.org/wiki/File:Mom_dad_en.jpg"
+        >Artwork by Marco Bruschtein. © 2014 Michael D. Fetters, M.D., M.P.H.,
+        M.A.</a
+      >,
+      <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>,
+      via Wikimedia Commons
     </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+      function signDictionary() {
+        window.open(
+          (url = "https://babysignlanguage.com/dictionary/"),
+          "_blank"
+        );
+      }
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
   </body>
 </html>
